@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neapolitan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="navbar" id="top">
+        <div class="logo">🍨 Neapolitan</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-contenido">
+                <h1>Diseños tiernos para tus proyectos</h1>
+                <p>Ilustraciones y recursos, listos para tu próxima idea.</p>
+                <a href="#servicios" class="boton-cta">Ver servicios</a>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="servicios">
+            <h2>Nuestros servicios</h2>
+            <div class="grid-servicios">
+                <article class="servicio-card">
+                    <h3>Ilustración</h3>
+                    <p>Personajes e íconos con estilo propio para tu marca.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>UI Kits</h3>
+                    <p>Componentes reutilizables listos para prototipar.</p>
+                </article>
+                <article class="servicio-card">
+                    <h3>Branding</h3>
+                    <p>Identidad visual coherente, de la paleta al logo.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section id="testimonios" class="testimonios">
+            <h2>Lo que dicen de nosotros</h2>
+            <div class="carrusel">
+                <div class="testimonio">
+                    <p>"Un trabajo increíble, superó lo que imaginaba."</p>
+                    <span>— Ana G.</span>
+                </div>
+                <div class="testimonio">
+                    <p>"Rápidos, prolijos y con mucha onda."</p>
+                    <span>— Martín P.</span>
+                </div>
+                <div class="testimonio">
+                    <p>"El mejor equipo de diseño con el que trabajé."</p>
+                    <span>— Lucía R.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contacto" class="contacto">
+            <h2>Contactanos</h2>
+            <form action="#" method="post">
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Neapolitan — Diseño UX-UI</p>
+    </footer>
+
+</body>
+
+</html>

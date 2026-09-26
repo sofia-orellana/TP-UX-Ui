@@ -1,0 +1,54 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #ffc2d3;
+    background-image: url("pinky2.jpg");
+    color: #3b2a20;
+    margin: 0;
+    padding: 1.5rem;
+}
+
+header h1 {
+    text-align: center;
+    color: #876b53;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.producto {
+    background-color: #ffffff;
+    border: 1px solid #a8d5ba;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    flex: 1 1 220px;
+    max-width: 140px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #9097a0;
+}
+
+.producto button {
+    background-color: #876b53;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #6f5643;
+}

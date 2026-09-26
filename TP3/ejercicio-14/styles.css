@@ -1,0 +1,54 @@
+:root {
+    --color-primario: #876b53;
+    --color-secundario: #ffc2d3;
+    --color-fondo: #fee3eb;
+    --color-texto: #3b2a20;
+    --espaciado: 1.5rem;
+    --radio-borde: 10px;
+}
+
+/* Variables redefinidas para el "modo oscuro" */
+body.oscuro {
+    --color-primario: #c9a585;
+    --color-secundario: #9f6072;
+    --color-fondo: #443238;
+    --color-texto: #f2f2f2;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    margin: 1;
+    padding: var(--espaciado);
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cabecera {
+    align-items: center;
+    margin-bottom: var(--espaciado);
+}
+
+.cabecera h1 {
+    color: var(--color-primario);
+    margin: 6;
+
+}
+
+#toggle-tema {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta {
+    background-color: var(--color-secundario);
+    padding: var(--espaciado);
+    border-radius: var(--radio-borde);
+    transition: background-color 0.3s ease;
+}

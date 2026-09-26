@@ -1,0 +1,22 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #ffc2d3;
+    color: #3b2a20;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1 {
+    color: #876b53;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+img {
+    max-width: 300px;
+    border-radius: 0px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

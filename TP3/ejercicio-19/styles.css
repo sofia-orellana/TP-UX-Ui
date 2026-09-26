@@ -1,0 +1,130 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #ffc2d3;
+    color: #3b2a20;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    color: #876b53;
+    text-align: center;
+}
+
+.form-pasos {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Radios ocultos (controlan el paso activo) */
+.radio-paso {
+    display: none;
+}
+
+.indicador {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.punto {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #ffc2d3;
+    color: #3b2a20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.linea {
+    width: 40px;
+    height: 3px;
+    background-color: #ffc2d3;
+}
+
+/* Pasos ocultos por defecto */
+.paso {
+    display: none;
+}
+
+/* Se muestra el paso según qué radio está :checked */
+#radio-paso1:checked~.paso1 {
+    display: block;
+}
+
+#radio-paso2:checked~.paso2 {
+    display: block;
+}
+
+#radio-paso2:checked~.indicador .punto1 {
+    background-color: #876b53;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: #876b53;
+}
+
+.campo {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+input {
+    padding: 0.6rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+/* Feedback visual con :valid / :invalid */
+input:required:invalid {
+    border-color: #d9534f;
+}
+
+input:required:valid {
+    border-color: #5cb85c;
+}
+
+.boton {
+    display: inline-block;
+    text-align: center;
+    background-color: #876b53;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #876b53;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.atras {
+    background-color: #ffc2d3;
+    color: #3b2a20;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="cabecera">
+        <h1>Temas</h1>
+    </header>
+
+    <main class="tarjeta">
+        <p>Este sitio usa variables CSS definidas</p>
+        <img src="ositos1.png" height="100">
+        <p>Al tocar el boton podra apreciar ambos modos.</p>
+        <button id="toggle-tema">Cambiar a modo oscuro</button>
+    </main>
+
+
+    <script>
+        document.getElementById('toggle-tema').addEventListener('click', function () {
+            document.body.classList.toggle('oscuro');
+            this.textContent = document.body.classList.contains('oscuro')
+                ? 'Cambiar a modo claro'
+                : 'Cambiar a modo oscuro';
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+/* ===========================
+   1. VARIABLES Y BASE
+   =========================== */
+:root {
+    --color-primario: #876b53;
+    --color-secundario: #ffc2d3;
+    --color-fondo: #fcd6e1;
+    --color-texto: #876b53;
+    --color-blanco: #ffffff;
+    --espaciado: 1.5rem;
+    --radio-borde: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+/* ===========================
+   2. NAVBAR (Flexbox, fija arriba)
+   =========================== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primario);
+    padding: 1rem 2rem;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--color-secundario);
+}
+
+/* ===========================
+   3. HERO
+   =========================== */
+.hero {
+    background: linear-gradient(#876b53, #fcd6e1);
+    ;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 1.5rem;
+    animation: aparecer 1s ease-out 1;
+}
+
+.hero-contenido h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.boton-cta {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #876b53;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.boton-cta:hover {
+    transform: scale(1.05);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   4. SERVICIOS (Grid)
+   =========================== */
+.servicios {
+    padding: var(--espaciado);
+    text-align: center;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 900px;
+    margin: 1.5rem auto 0;
+}
+
+.servicio-card {
+    background-color: var(--color-blanco);
+    border: 1px solid var(--color-secundario);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.servicio-card h3 {
+    color: var(--color-primario);
+}
+
+/* ===========================
+   5. TESTIMONIOS (carrusel con scroll-snap)
+   =========================== */
+.testimonios {
+    padding: var(--espaciado);
+    text-align: center;
+    background-color: var(--color-secundario);
+}
+
+.carrusel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.testimonio {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem;
+}
+
+.testimonio span {
+    display: block;
+    margin-top: 0.6rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* ===========================
+   6. CONTACTO
+   =========================== */
+.contacto {
+    padding: var(--espaciado);
+    text-align: center;
+}
+
+.contacto form {
+    max-width: 450px;
+    margin: 1.5rem auto 0;
+    background-color: var(--color-blanco);
+    padding: 1.5rem;
+    border-radius: var(--radio-borde);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.campo {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    padding: 0.6rem;
+    border: 2px solid var(--color-secundario);
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.contacto button {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contacto button:hover {
+    background-color: #876b53;
+}
+
+/* ===========================
+   7. FOOTER
+   =========================== */
+.footer {
+    text-align: center;
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ===========================
+   8. MEDIA QUERIES (responsividad)
+   =========================== */
+@media (min-width: 600px) {
+    .grid-servicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-servicios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-contenido h1 {
+        font-size: 2.8rem;
+    }
+}

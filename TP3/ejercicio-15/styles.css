@@ -1,0 +1,77 @@
+/*
+  Enfoque: MOBILE FIRST.
+  Se eligió mobile-first porque la mayoría de las visitas a un sitio hoy en día
+  arrancan desde un celular; definir primero el layout simple de una columna
+  evita sobrescribir muchas reglas y hace el CSS más liviano en pantallas chicas.
+*/
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin: 0;
+    color: #3b2a20;
+}
+
+/* Base (mobile): una sola columna, sin sidebar visible */
+.layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "contenido"
+        "footer";
+    min-height: 100vh;
+}
+
+.sidebar {
+    display: none;
+}
+
+.header {
+    grid-area: header;
+    background-color: #fcbbc6;
+    color: #3b2a20;
+    padding: 1rem;
+}
+
+.contenido {
+    grid-area: contenido;
+    background-color: #fbe1e5;
+    padding: 1rem;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #fcbbc6;
+    color: #3b2a20;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Breakpoint 1: tablets en adelante (>= 600px) -> aparece el sidebar arriba del contenido */
+@media (min-width: 600px) {
+    .sidebar {
+        display: block;
+        background-color: #fecdd3;
+        padding: 1rem;
+    }
+
+    .layout {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "contenido"
+            "footer";
+    }
+}
+
+/* Breakpoint 2: escritorio (>= 768px) -> layout de 2 columnas con sidebar lateral */
+@media (min-width: 768px) {
+    .layout {
+        grid-template-columns: 220px 1fr;
+        grid-template-areas:
+            "header header"
+            "sidebar contenido"
+            "footer footer";
+    }
+}

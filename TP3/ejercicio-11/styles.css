@@ -1,0 +1,48 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #ffc2d3;
+    color: #3b2a20;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    color: #876b53;
+    text-align: center;
+}
+
+.lista-enlaces {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-enlaces li {
+    margin-bottom: 0.5rem;
+}
+
+.lista-enlaces li::before {
+    content: "🍨 ";
+}
+
+.lista-enlaces a {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #a4866b;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    color: #3b2a20;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Pseudo-clase :hover */
+.lista-enlaces a:hover {
+    background-color: #a4866b;
+    color: #ffffff;
+}
+
+/* Pseudo-clase :nth-child() para alternar tonos */
+.lista-enlaces li:nth-child(even) a {
+    background-color: #fedce6;
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #ffc2d3;
+    background-image: url("pinky2.jpg");
+    color: #3b2a20;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    color: #876b53;
+    text-align: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    border: 2px solid #a8d5ba;
+    border-radius: 20px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+textarea {
+    border-radius: 12px;
+    resize: vertical;
+}
+
+/* Estado :focus */
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #8b6f56;
+    box-shadow: 0 0 0 3px rgba(139, 111, 86, 0.2);
+}
+
+button {
+    background-color: #876b53;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Estado :hover */
+button:hover {
+    background-color: #6f5643;
+}
+
+/* Estado :active */
+button:active {
+    transform: scale(0.96);
+}
